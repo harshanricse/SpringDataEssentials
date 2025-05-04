@@ -14,7 +14,6 @@ import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 @Entity
-@Data
 public class Customer {
 
 	@Id
@@ -28,6 +27,46 @@ public class Customer {
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="cust_id")
 	private List<Card> cards;
+
+	public Integer getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(Integer customerId) {
+		this.customerId = customerId;
+	}
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public LocalDate getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(LocalDate dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public List<Card> getCards() {
+		return cards;
+	}
+
+	public void setCards(List<Card> cards) {
+		this.cards = cards;
+	}
 	
 	
 }

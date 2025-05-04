@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,11 +17,12 @@ import com.infy.dto.CardDTO;
 import com.infy.dto.CustomerDTO;
 import com.infy.service.CardCustomerService;
 
-import lombok.extern.log4j.Log4j2;
+//import lombok.extern.log4j.Log4j2;
 
 @SpringBootApplication
-@Log4j2
+//@Log4j2
 public class DemoOneToManyApplication implements CommandLineRunner {
+	public static final Log log = LogFactory.getLog(DemoOneToManyApplication.class);
 
 	@Autowired
 	CardCustomerService cardCustomerService;
@@ -34,11 +37,11 @@ public class DemoOneToManyApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-//		 addCustomer();
-//		 addNewCardToExistingCustomer();
-		// getCustomerWithCardDetails();
-//		 deleteCardOfExistingCustomer();
-//		 deleteCustomer();
+		 addCustomer();
+		 addNewCardToExistingCustomer();
+		 getCustomerWithCardDetails();
+		 deleteCardOfExistingCustomer();
+		 deleteCustomer();
 		getAllCustomers();
 	}
 

@@ -20,8 +20,6 @@ public class CustomerServiceImpl implements CustomerService{
 	
 	private CustomerRepository  repository;  
 	
-	 
-
              @Override 
 
 			public void insertCustomer(CustomerDTO customer) { 
@@ -30,14 +28,14 @@ public class CustomerServiceImpl implements CustomerService{
             
              } 
 
-				@Override 
-				
-				public Page<Customer> findAll(Pageable page) { 
-				
-				return repository.findAll(page); 
-				
-				
-				
-				} 
+			@Override 
+			
+			public Page<Customer> findAll(Pageable page) { 
+			
+			return repository.findAll(page); 
+			
+			
+			
+			} 
 
 } 
