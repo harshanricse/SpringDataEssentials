@@ -9,6 +9,7 @@ import javax.persistence.Table;
 import com.infytel.dto.CustomerDTO;
 
 @Entity
+//@Table
 @Table(name = "customer",indexes = {
 		@Index(name="index_Customer_name",columnList = "name")	
 	})

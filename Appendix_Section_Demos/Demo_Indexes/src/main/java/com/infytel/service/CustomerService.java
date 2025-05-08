@@ -1,16 +1,8 @@
 package com.infytel.service;
 
-import java.util.List;
-
-import com.infytel.dto.CustomerDTO;
-import com.infytel.exception.InfyTelException;
-
-public interface CustomerService {
-
-	// Here, getCustomer method will access the repository layer method to get Customer record
-		public CustomerDTO getCustomer(Long phoneNumber) throws InfyTelException;
-			
-
-       public void deleteCustomer(Long phoneNo1);
-	
-}
+import com.infytel.dto.CustomerDTO; 
+public interface CustomerService { 
+CustomerDTO findbyName(String name);
+public void insertCustomer(CustomerDTO customer) ; 
+	public CustomerDTO getCustomer(Long phoneno);
+} 
